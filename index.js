@@ -1,7 +1,8 @@
+import "dotenv/config"
 import express from "express"
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 // middleware to parse JSON body
 app.use(express.json()) // any data that comes in json format we accept that
